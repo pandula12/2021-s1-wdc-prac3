@@ -1,6 +1,6 @@
-var mcount = 0;
+var counter = 0;
 
 function count() {
-    document.getElementById("mcount").innerText = mcount;
-    mcount++;
+    document.getElementById("mcount").innerText = counter;
+    counter++;
 }

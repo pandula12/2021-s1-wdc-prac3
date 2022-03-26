@@ -6,7 +6,7 @@ function count() {
 }
 
 function new_post() {
-    let date = new Date().toLocaleDateString();
+    let date = new Date();
     let content = document.getElementById('message').value;
     let post = document.getElementById('posts');
     

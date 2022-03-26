@@ -6,7 +6,7 @@ function count() {
 }
 
 function new_post() {
-    let date = new Date();
+    let date = new Date().toLocaleDateString();
     let content = document.getElementById('message').value;
     let post = document.getElementById('posts');
     
@@ -28,6 +28,19 @@ function add_post(date,content, post) {
     post.appendChild(postContent);
 }
 
+function menu() {
+    let main = document.getElementById("main");
+    main.style.display = 'none';
+    let menu = document.getElementById("menu");
+    menu.style.display = 'block';
+}
+
+function main() {
+    let main = document.getElementById("main");
+    main.style.display = 'block';
+    let menu = document.getElementById("menu");
+    menu.style.display = 'none';
+}
 
 
 

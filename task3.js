@@ -1,7 +1,6 @@
-function count() {
-    document.getElementById("mcount").innerText = counter;
-    counter++;
-}
+var mcount = 0;
 
-var counter = 0;
-document.getElementById("mcount").onmouseenter = count;
+function count() {
+    document.getElementById("mcount").innerText = mcount;
+    mcount++;
+}

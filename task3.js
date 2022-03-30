@@ -10,16 +10,14 @@ function new_post() {
     let date = new Date();
     let content = document.getElementById("message").value;
     let post = document.getElementById("posts");
-    post.classList.add("post-date");
-    post.classList.add("post-content");
 
     for (let i = 0; i < post_number; i++) {
 
         let postDate = document.createElement("P");
         let postContent = document.createElement("P");
 
-        postDate.class = "post-date";
-        postContent.class = "post-content";
+        postDate.classList.add("post-date");
+        postContent.classList.add("post-content");
 
         postDate.style.fontWeight = "bold";
         postDate.style.color = "grey";

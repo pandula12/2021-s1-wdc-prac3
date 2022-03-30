@@ -6,24 +6,33 @@ function count() {
 }
 
 function new_post() {
+    let post_number = document.querySelector('input[name="quantity"]').value;
     let date = new Date();
     let content = document.getElementById('message').value;
     let post = document.getElementById('posts');
-    
-    let postDate = document.createElement("p");
-    let postContent = document.createElement("p");
 
-    postDate.class = 'post-date';
-    postContent.class = 'post-content';
+    for (let i = 0; i < post_number; i++) {
 
-    postDate.style.fontWeight = "bold";
-    postDate.style.color = "grey";
+        let postDate = document.createElement("p");
+        let postContent = document.createElement("p");
 
-    postDate.innerText = date;
-    postContent.innerText = content;
+        postDate.class = 'post-date';
+        postContent.class = 'post-content';
 
-    post.appendChild(postDate);
-    post.appendChild(postContent);
+        postDate.style.fontWeight = "bold";
+        postDate.style.color = "grey";
+
+        if (document.querySelector('input[name="color"]:checked')) {
+            let post_color = document.querySelector('input[name="color"]:checked').value;
+            postContent.style.color = post_color;
+        }
+
+        postDate.innerText = date;
+        postContent.innerText = content;
+
+        post.appendChild(postDate);
+        post.appendChild(postContent);
+    }
 }
 
 function menu() {

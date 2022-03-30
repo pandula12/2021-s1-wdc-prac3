@@ -2,22 +2,24 @@ var counter = 0;
 
 function count() {
     counter++;
-    document.getElementById('mcount').innerText = counter;
+    document.getElementById("mcount").innerText = counter;
 }
 
 function new_post() {
     let post_number = document.querySelector('input[name="quantity"]').value;
     let date = new Date();
-    let content = document.getElementById('message').value;
-    let post = document.getElementById('posts');
+    let content = document.getElementById("message").value;
+    let post = document.getElementById("posts");
+    post.classList.add("post-date");
+    post.classList.add("post-content");
 
     for (let i = 0; i < post_number; i++) {
 
-        let postDate = document.createElement("p");
-        let postContent = document.createElement("p");
+        let postDate = document.createElement("P");
+        let postContent = document.createElement("P");
 
-        postDate.class = 'post-date';
-        postContent.class = 'post-content';
+        postDate.class = "post-date";
+        postContent.class = "post-content";
 
         postDate.style.fontWeight = "bold";
         postDate.style.color = "grey";
@@ -37,16 +39,16 @@ function new_post() {
 
 function menu() {
     let main = document.getElementById("main");
-    main.style.display = 'none';
+    main.style.display = "none";
     let menu = document.getElementById("menu");
-    menu.style.display = 'block';
+    menu.style.display = "block";
 }
 
 function main() {
     let main = document.getElementById("main");
-    main.style.display = 'block';
+    main.style.display = "block";
     let menu = document.getElementById("menu");
-    menu.style.display = 'none';
+    menu.style.display = "none";
 }
 
 

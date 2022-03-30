@@ -7,7 +7,7 @@ function count() {
 
 function new_post() {
     let post_number = document.querySelector('input[name="quantity"]').value;
-    let date = new Date();
+    let date = new Date().toLocaleString();
     let content = document.getElementById("message").value;
     let post = document.getElementById("posts");
 
